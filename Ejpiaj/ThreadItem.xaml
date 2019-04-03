@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Ejpiaj.ThreadItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Ejpiaj"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="500" Margin="0,0,0,20">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding PostImageSource}" MaxHeight="100"/>
+        <StackPanel Grid.Column="1">
+            <Label Content="{Binding Header}" FontWeight="Bold" FontSize="10"/>
+            <Label>
+                <Label.Content>
+                    <AccessText TextWrapping="Wrap" Text="{Binding PostBody}"/>
+                </Label.Content>
+            </Label>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="Ejpiaj.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejpiaj"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <ScrollViewer>
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="BoardText" Text="v"/>
+                <Button Grid.Column="1" Content="Get" Click="Button_Click"/>
+            </Grid>
+            <StackPanel x:Name="Items">
+                <local:CatalogItem ID="Prdel" Title="XDDD" Body="praldawezsdasde" ImageSource="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.364mAB1JHmgIPvYB5dO9sgHaE0%26pid%3DApi"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
