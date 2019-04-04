@@ -20,12 +20,15 @@ namespace Ejpiaj
     public partial class ThreadWindow : Window
     {
         ApiWrap api;
+        List<Post> posts;
+        string id;
 
         public ThreadWindow(string id, ApiWrap api)
         {
             InitializeComponent();
 
             this.api = api;
+            this.id = id;
 
             Title = $"Fulčen - /{api.Board}/ Thread No.: {id}";
 
@@ -38,6 +41,7 @@ namespace Ejpiaj
 
             Thread thr = await api.GetThread(id);
 
+            posts = thr.posts;
             foreach (var post in thr.posts)
             {
                 ThreadItem item = new ThreadItem();
@@ -60,6 +64,13 @@ namespace Ejpiaj
 
                 Items.Children.Add(item);
             }
+
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new ImageList(api.Board, id, posts).Show();
         }
     }
 }

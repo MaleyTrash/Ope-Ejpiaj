@@ -7,8 +7,11 @@
         mc:Ignorable="d"
         Title="ThreadWindow" Height="450" Width="800">
     <ScrollViewer>
-        <StackPanel x:Name="Items">
+        <StackPanel>
+            <Button Content="Gallery" Click="Button_Click"/>
+            <StackPanel x:Name="Items">
 
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </Window>
